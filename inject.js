@@ -3293,7 +3293,7 @@ window.GrafanaFaroWebSdk.initializeFaro({
   },
   transports: [
     new window.GrafanaFaroWebSdk.FetchTransport({
-      url: "https://141741533462.collect.observeinc.com/v1/http",
+      url: "https://141741533462.collect.observeinc.com/v1/http?source=faro",
       requestOptions: {
         headers: {
           Authorization:
@@ -3309,3 +3309,7 @@ window.GrafanaFaroWebSdk.initializeFaro({
     enabled: true,
   },
 });
+
+{
+  window.GrafanaFaroWebSdk.faro.instrumentations.add(new window.GrafanaFaroWebTracing.TracingInstrumentation());
+};
