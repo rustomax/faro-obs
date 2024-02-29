@@ -3310,6 +3310,6 @@ window.GrafanaFaroWebSdk.initializeFaro({
   },
 });
 
-{
-  window.GrafanaFaroWebSdk.faro.instrumentations.add(new window.GrafanaFaroWebTracing.TracingInstrumentation());
-};
+window.addTracing = () => {
+  window.GrafanaFaroWebSdk.faro.instrumentations.add(new window.GrafanaFaroWebTracing.TracingInstrumentation({}));
+}
