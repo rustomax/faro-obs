@@ -14,12 +14,12 @@ window.GrafanaFaroWebSdk.initializeFaro({
     }),
   ],
   sessionTracking: {
-    enabled: true,
-    persistent: true
+    enabled: false,
+    //persistent: true
   },
   batching: {
     enabled: true,
   },
 });
 
-window.GrafanaFaroWebSdk.faro.instrumentations.add(new window.GrafanaFaroWebTracing.TracingInstrumentation({}));
+//window.GrafanaFaroWebSdk.faro.instrumentations.add(new window.GrafanaFaroWebTracing.TracingInstrumentation({}));
